@@ -17,5 +17,5 @@ export const paidTotal = sale => (sale.payments || []).reduce((sum, p) => sum + 
 export const saleStatus = sale => sale.status === 'Cancelada' ? 'Cancelada' : paidTotal(sale) >= saleTotal(sale) - .009 ? 'Pago' : paidTotal(sale) > 0 ? 'Pagamento parcial' : 'Aguardando pagamento'
 export const emptyState = {
   clients: [], trips: [], sales: [],
-  settings: { company: 'Rota Viva Excursões', owner: 'Magno Jorge de Castro Nascimento', ownerCpf: '804.914.801-72', phone: '', email: '', address: '', reservationPrefix: 'RV', lastReservation: 0 }
+  settings: { company: 'Rota Viva Excursões', owner: 'Magno Jorge de Castro Nascimento', ownerCpf: '804.914.801-72', phone: '', email: '', address: '', reservationPrefix: 'RV', lastReservation: 0, commissionRate: 0 }
 }
