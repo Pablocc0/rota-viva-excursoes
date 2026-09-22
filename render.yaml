@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rota-viva-excursoes
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: VITE_NEON_AUTH_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
